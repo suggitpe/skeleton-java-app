@@ -1,9 +1,9 @@
-target
+target/
 *.class
 *.iml
 *.ipr
-.idea
+.idea/
 .classpath
-.settings
+.settings/
 .project
 .DS_Store
