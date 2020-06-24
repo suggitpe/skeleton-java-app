@@ -2,3 +2,8 @@ language: java
 jdk:
 - openjdk8
 script: mvn clean verify
+deploy:
+  provider: heroku
+  api_key:
+    secure: 1a141ab6-0a91-4dc2-b730-790a902d4fec
+  app: stark-waters-23164
