@@ -27,7 +27,7 @@ public class QueryProcessorTest {
 
   @Test
   public void addsTwoNumbers() throws Exception{
-    assertThat(queryProcessor.process("what is 3 plus 7"), is ("10"));
+    assertThat(queryProcessor.process("ddddd: what is 3 plus 7"), is ("10"));
   }
 
 
