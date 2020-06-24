@@ -1,5 +1,6 @@
 package com.develogical;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.containsString;
@@ -30,6 +31,16 @@ public class QueryProcessorTest {
     assertThat(queryProcessor.process("ddddd: what is 3 plus 7"), is ("10"));
   }
 
+  @Test
+  public void multipliesTwoNumbers() throws Exception{
+    assertThat(queryProcessor.process("ddddd: What is 3 * 7"), is ("21"));
+  }
+
+  @Test
+  @Ignore
+  public void findsTheGreatestInList() throws Exception{
+    assertThat(queryProcessor.process("ddddd: which of the following numbers is the largest: 16, 596, 848, 25"), is ("848"));
+  }
 
 
 }

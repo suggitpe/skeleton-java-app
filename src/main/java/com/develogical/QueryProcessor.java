@@ -13,14 +13,27 @@ public class QueryProcessor {
             return "Pete Suggitt";
         }
 
-        if (query.toLowerCase().contains("what is ")) {
+        if (query.contains("what is ")) {
             String[] arr = query.split(" ");
             Integer foo = parseInt(arr[3]) + parseInt(arr[5]);
             System.out.println(foo);
             return foo.toString();
         }
 
+        if (query.contains("What is ")) {
+            String[] arr = query.split(" ");
+            Integer foo = parseInt(arr[3]) * parseInt(arr[5]);
+            System.out.println(foo);
+            return foo.toString();
+        }
+
         if(query.toLowerCase().contains("which of the following numbers is the largest")){
+            String[] numbers = query.split(":")[2].split(", ");
+            String max = "0";
+            for(String number: numbers){
+
+            }
+            System.out.println(numbers.length);
             return "75";
         }
 
