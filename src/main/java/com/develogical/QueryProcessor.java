@@ -7,10 +7,6 @@ public class QueryProcessor {
             return "William Shakespeare";
         }
 
-        if(query.toLowerCase().contains("foo")){
-            return "bar";
-        }
-
         if(query.toLowerCase().contains("your name")){
             return "Pete Suggitt";
         }

@@ -25,10 +25,4 @@ public class QueryProcessorTest {
     assertThat(queryProcessor.process("test"), is(""));
   }
 
-  @Test
-  public void fooBar() throws Exception{
-    assertThat(queryProcessor.process("foo"), is("bar"));
-  }
-
-
 }
