@@ -41,6 +41,7 @@ public class WebServer {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
       String query = req.getParameter("q");
+      System.out.println(query);
       String answer = new QueryProcessor().process(query);
       queries.put(query, answer);
       new ApiResponse(answer).writeTo(resp);
