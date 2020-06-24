@@ -4,7 +4,9 @@ import com.develogical.web.ApiResponse;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import javax.servlet.Servlet;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -20,7 +22,7 @@ import org.eclipse.jetty.servlet.Source;
 
 public class WebServer {
 
-  private static final List<String> queries = new ArrayList<>();
+  private static final Map<String, String> queries = new HashMap<>();
 
   public WebServer() throws Exception {
 
@@ -39,8 +41,9 @@ public class WebServer {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
       String query = req.getParameter("q");
-      queries.add(query);
-      new ApiResponse(new QueryProcessor().process(query)).writeTo(resp);
+      String answer = new QueryProcessor().process(query);
+      queries.put(query, answer);
+      new ApiResponse(answer).writeTo(resp);
     }
   }
 
