@@ -37,6 +37,11 @@ public class QueryProcessorTest {
   }
 
   @Test
+  public void multipliesTwoNumbersOther() throws Exception{
+    assertThat(queryProcessor.process("ddddd: what is 3 multiplied by 7"), is ("21"));
+  }
+
+  @Test
   public void findsTheGreatestInList() throws Exception{
     assertThat(queryProcessor.process("ddddd: which of the following numbers is the largest: 16, 596, 848, 25"), is ("848"));
   }

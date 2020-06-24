@@ -27,6 +27,13 @@ public class QueryProcessor {
             return foo.toString();
         }
 
+        if (query.contains("what is ") && query.contains(" multiplied by ")) {
+            String[] arr = query.split(" ");
+            Integer foo = parseInt(arr[3]) * parseInt(arr[6]);
+            System.out.println(foo);
+            return foo.toString();
+        }
+
         if(query.toLowerCase().contains("which of the following numbers is the largest")){
             String[] numbers = query.split(":")[2].split(", ");
             String max = "0";
@@ -37,6 +44,10 @@ public class QueryProcessor {
             }
             System.out.println(numbers.length);
             return max;
+        }
+
+        if(query.toLowerCase().contains("which of the following numbers is both a square and a cube")){
+            return "";
         }
 
         return "";
