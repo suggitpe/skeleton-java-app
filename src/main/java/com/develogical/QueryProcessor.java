@@ -31,10 +31,12 @@ public class QueryProcessor {
             String[] numbers = query.split(":")[2].split(", ");
             String max = "0";
             for(String number: numbers){
-
+                if(parseInt(max) < parseInt(number.trim())){
+                    max = number.trim();
+                }
             }
             System.out.println(numbers.length);
-            return "75";
+            return max;
         }
 
         return "";

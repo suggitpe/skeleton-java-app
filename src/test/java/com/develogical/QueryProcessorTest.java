@@ -37,7 +37,6 @@ public class QueryProcessorTest {
   }
 
   @Test
-  @Ignore
   public void findsTheGreatestInList() throws Exception{
     assertThat(queryProcessor.process("ddddd: which of the following numbers is the largest: 16, 596, 848, 25"), is ("848"));
   }
