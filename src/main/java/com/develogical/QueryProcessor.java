@@ -13,14 +13,14 @@ public class QueryProcessor {
             return "Pete Suggitt";
         }
 
-        if (query.contains("what is ")) {
+        if (query.contains("what is ") && query.contains(" plus ")) {
             String[] arr = query.split(" ");
             Integer foo = parseInt(arr[3]) + parseInt(arr[5]);
             System.out.println(foo);
             return foo.toString();
         }
 
-        if (query.contains("What is ")) {
+        if (query.contains("What is ") && query.contains(" * ")) {
             String[] arr = query.split(" ");
             Integer foo = parseInt(arr[3]) * parseInt(arr[5]);
             System.out.println(foo);
