@@ -15,7 +15,7 @@ public class QueryProcessor {
 
         if (query.toLowerCase().contains("what is ")) {
             String[] arr = query.split(" ");
-            Integer foo = parseInt(arr[2]) + parseInt(arr[4]);
+            Integer foo = parseInt(arr[3]) + parseInt(arr[5]);
             System.out.println(foo);
             return foo.toString();
         }
